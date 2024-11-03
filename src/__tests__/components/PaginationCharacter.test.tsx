@@ -7,7 +7,7 @@ describe('<PaginationCharacter/>', () => {
 	const mockHandlePreviousPage = jest.fn();
 	const mockHandleNextPage = jest.fn();
 	test('calls handle previous and next page when button is clicked ', () => {
-		(useHandlePagination as jest.Mock).mockReturnValue({
+		(useHandlePagination as jest.Mock).mockReturnValueOnce({
 			handlePreviousPage: mockHandlePreviousPage,
 			handleNextPage: mockHandleNextPage,
 		});

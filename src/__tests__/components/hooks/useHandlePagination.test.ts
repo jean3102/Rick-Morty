@@ -22,7 +22,7 @@ describe('useHandlePagination', () => {
 	});
 
 	test('should navigate to previous page', () => {
-		useSearchParamsMock.mockReturnValue([
+		useSearchParamsMock.mockReturnValueOnce([
 			new URLSearchParams({ page: '2' }),
 			searchParamMock,
 		]);
@@ -34,7 +34,7 @@ describe('useHandlePagination', () => {
 	});
 
 	test('should not decrement below page 1', () => {
-		useSearchParamsMock.mockReturnValue([new URLSearchParams({ page: '1' })]);
+		useSearchParamsMock.mockReturnValueOnce([new URLSearchParams({ page: '1' })]);
 		const { result } = renderHook(() => useHandlePagination());
 		const { handlePreviousPage } = result.current;
 		handlePreviousPage();

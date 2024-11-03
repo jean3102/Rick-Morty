@@ -14,7 +14,7 @@ describe('CharacterCard', () => {
 	});
 
 	test('should show the title', async () => {
-		mockUseCharacterList.mockReturnValue({
+		mockUseCharacterList.mockReturnValueOnce({
 			characters: [],
 			loading: false,
 			error: '',
@@ -36,7 +36,7 @@ describe('CharacterCard', () => {
 	});
 
 	test('displays loading text when loading', async () => {
-		mockUseCharacterList.mockReturnValue({
+		mockUseCharacterList.mockReturnValueOnce({
 			characters: [],
 			loading: true,
 			error: '',
@@ -53,7 +53,7 @@ describe('CharacterCard', () => {
 
 	test('should display error message if error exist', async () => {
 		const errorMessage = 'Failed to fetch characters';
-		mockUseCharacterList.mockReturnValue({
+		mockUseCharacterList.mockReturnValueOnce({
 			characters: mockCharacters.results,
 			loading: false,
 			error: errorMessage,
@@ -69,7 +69,7 @@ describe('CharacterCard', () => {
 	});
 
 	test('should display "data no found" if no characters are available', () => {
-		mockUseCharacterList.mockReturnValue({
+		mockUseCharacterList.mockReturnValueOnce({
 			characters: [],
 			loading: false,
 			error: '',
@@ -87,7 +87,7 @@ describe('CharacterCard', () => {
 	});
 
 	test('should display buttons previous and next if data exist', () => {
-		mockUseCharacterList.mockReturnValue({
+		mockUseCharacterList.mockReturnValueOnce({
 			characters: mockCharacters.results,
 			loading: false,
 			error: '',
