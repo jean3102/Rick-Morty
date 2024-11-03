@@ -36,8 +36,19 @@ describe('useHandlePagination', () => {
 	test('should not decrement below page 1', () => {
 		useSearchParamsMock.mockReturnValue([new URLSearchParams({ page: '1' })]);
 		const { result } = renderHook(() => useHandlePagination());
-		const {handlePreviousPage} = result.current;
-		handlePreviousPage()
-		expect(searchParamMock).not.toHaveBeenCalled()
+		const { handlePreviousPage } = result.current;
+		handlePreviousPage();
+		expect(searchParamMock).not.toHaveBeenCalled();
+	});
+
+	test('should go to second page when you are first page for first time', () => {
+		useSearchParamsMock.mockReturnValueOnce([
+			new URLSearchParams(),
+			searchParamMock,
+		]);
+		const { result } = renderHook(() => useHandlePagination());
+		const { handleNextPage } = result.current;
+		handleNextPage();
+		expect(searchParamMock).toHaveBeenCalledWith({ page: '2' });
 	});
 });

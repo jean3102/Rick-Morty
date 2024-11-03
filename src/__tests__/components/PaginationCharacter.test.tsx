@@ -21,4 +21,5 @@ describe('<PaginationCharacter/>', () => {
 		expect(mockHandlePreviousPage).toHaveBeenCalled();
 		expect(mockHandleNextPage).toHaveBeenCalled();
 	});
+	
 });
