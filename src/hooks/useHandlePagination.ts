@@ -6,6 +6,7 @@ const useHandlePagination = () => {
 	let currentPage = Number(page);
 
 	const handleNextPage = () => {
+		if (Number(page) === 0) return setSearchParams({ page: '2' });
 		currentPage = Number(page) + 1;
 		setSearchParams({ page: String(currentPage) });
 	};
