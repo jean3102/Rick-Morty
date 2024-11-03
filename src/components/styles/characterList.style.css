@@ -1,0 +1,68 @@
+.characterList {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	list-style: none;
+	justify-content: center;
+	padding-bottom: 7em;
+
+	li {
+		figure {
+			display: flex;
+
+			background-color: #3c3e44;
+			width: 450px;
+			height: 190px;
+			box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+			border-top-left-radius: 1em;
+			border-bottom-left-radius: 1em;
+		}
+		img {
+			width: 150px;
+			border-top-left-radius: 1em;
+			border-bottom-left-radius: 1em;
+		}
+		figcaption {
+			ul {
+				list-style: none;
+				display: flex;
+				flex-direction: column;
+				gap: 0.8em;
+				padding: 1em;
+				width: 100%;
+				margin-top: 0.5em;
+				li span:nth-child(1) {
+					display: inline-block;
+					width: 10px;
+					height: 10px;
+					border-radius: 50%;
+					margin: 0 5px;
+				}
+				.Alive {
+					background-color: green;
+				}
+				.Dead {
+					background-color: red;
+				}
+
+				.unknown {
+					background-color: orange;
+				}
+				li:nth-child(3) {
+					color: rgb(158, 158, 158);
+				}
+			}
+		}
+	}
+}
+
+@media (width < 800px) {
+	.characterList {
+		li {
+			figure {
+				width: 380px;
+			}
+		}
+	}
+}

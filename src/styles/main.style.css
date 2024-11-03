@@ -1,0 +1,10 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	background-color: rgb(29 31 37);
+    height: 100vh;
+    overflow-y: auto;
+}

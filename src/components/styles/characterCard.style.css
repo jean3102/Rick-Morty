@@ -1,0 +1,24 @@
+.characterCard {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	color: white;
+
+	ul {
+		width: 90%;
+	}
+
+	h1 {
+		margin: 1em;
+	}
+
+	h2 {
+		margin-top: 5vh;
+	}
+}
+.errorMessage {
+	color: red;
+	text-align: center;
+	margin-top: 15vh;
+	font-size: 2em;
+}
