@@ -19,7 +19,7 @@ const CharacterList = ({ characters }: CharacterListProps) => {
 						<figcaption>
 							<ul>
 								<li>
-									<h2>{name}</h2>
+									<h3>{name}</h3>
 								</li>
 								<li>
 									<span className={status}></span>

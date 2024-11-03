@@ -9,14 +9,12 @@
 	li {
 		figure {
 			display: flex;
-
-			background-color: #3c3e44;
-			width: 450px;
 			height: 190px;
+			width: 400px;
 			box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
 			border-top-left-radius: 1em;
 			border-bottom-left-radius: 1em;
+			background-color: #3c3e44;
 		}
 		img {
 			width: 150px;
@@ -29,15 +27,16 @@
 				display: flex;
 				flex-direction: column;
 				gap: 0.8em;
-				padding: 1em;
-				width: 100%;
-				margin-top: 0.5em;
+				padding-left: 1em;
+				padding-top: 1em;
+				justify-content: space-around;
+
 				li span:nth-child(1) {
 					display: inline-block;
 					width: 10px;
 					height: 10px;
 					border-radius: 50%;
-					margin: 0 5px;
+					margin-right: 5px;
 				}
 				.Alive {
 					background-color: green;
@@ -45,7 +44,7 @@
 				.Dead {
 					background-color: red;
 				}
-
+				
 				.unknown {
 					background-color: orange;
 				}
@@ -59,10 +58,18 @@
 
 @media (width < 800px) {
 	.characterList {
+		font-size: 0.9em;
 		li {
 			figure {
-				width: 380px;
+				width: 340px;
+				min-height: 150px;
+				max-height: auto;
 			}
+			
+			img {
+				width: 130px;
+			}
+			
 		}
 	}
 }
